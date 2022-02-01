@@ -7,14 +7,14 @@
  */
 
  import React, {useState} from 'react';
- import { View, Image, Text, Pressable, StyleSheet} from 'react-native';
+ import { View, Image, Text, Pressable, StyleSheet, Dimensions } from 'react-native';
  
  const App = () => {
    const logo = "http://getdrawings.com/images/simple-mountain-drawing-21.jpg";
   return(
     <View 
       style={{
-        marginTop: 100,
+        marginTop: Dimensions.get('window').height / 4,
       }}
     >
       <View>
