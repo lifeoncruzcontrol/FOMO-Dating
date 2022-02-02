@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet, Dimensions } from 'react-native';
 
-const LandingPage = () => {
+const LandingPage = ({ navigation }) => {
   return(
     <View 
       style={{
@@ -18,6 +18,7 @@ const LandingPage = () => {
       <View>
         <Pressable
           style={styles.createAcct}
+          onPress={() => navigation.navigate('CreateAccount')}
         >
           <Text
             style={styles.text}
