@@ -1,20 +1,11 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Pressable, StyleSheet } from 'react-native';
+import Header from './header';
 
 const Home = ({ navigation }) => {
   return(
-    <View 
-      style={{
-        marginTop: Dimensions.get('window').height / 4,
-      }}
-    >
-      <View>
-        <Text
-          style={styles.title}
-        >
-          FOMO Dating
-        </Text>
-      </View>
+    <>
+      <Header />
       <View>
         <Pressable
           style={styles.createAcct}
@@ -39,7 +30,7 @@ const Home = ({ navigation }) => {
           By creating an account or signing in, you agree to our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy.
         </Text>
       </View>
-     </View>
+    </>
    );
 };
 
