@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet, Dimensions } from 'react-native';
 
-const LandingPage = ({ navigation }) => {
+const Home = ({ navigation }) => {
   return(
     <View 
       style={{
@@ -72,4 +72,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LandingPage;
+export default Home;
