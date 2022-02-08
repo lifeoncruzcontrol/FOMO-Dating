@@ -8,7 +8,7 @@ const Home = ({ navigation }) => {
       <Header />
       <View>
         <Pressable
-          style={styles.createAcct}
+          style={{...styles.button, ...styles.createAcct}}
           onPress={() => navigation.navigate('CreateAccount')}
         >
           <Text
@@ -18,7 +18,7 @@ const Home = ({ navigation }) => {
           </Text>
         </Pressable>
         <Pressable
-          style={styles.signIn}
+          style={{...styles.button, ...styles.signIn}}
         >
           <Text
             style={styles.text}
@@ -40,22 +40,18 @@ const styles = StyleSheet.create({
    alignSelf: 'center',
    marginBottom: 200
   },
-  createAcct: {
+  button: {
     backgroundColor: '#add8e6',
     width: "50%",
     alignItems: 'center',
     alignSelf: 'center',
     paddingVertical: 20,
-    borderRadius: 10,
+    borderRadius: 10
+  },
+  createAcct: {
     marginBottom: 20
   },
   signIn: {
-   backgroundColor: '#add8e6',
-   width: "50%",
-   alignItems: 'center',
-   alignSelf: 'center',
-   paddingVertical: 20,
-   borderRadius: 10,
    marginBottom: 50
  },
   text: {
