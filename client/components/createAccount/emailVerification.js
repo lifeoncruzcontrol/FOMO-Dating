@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Text, Dimensions, SafeAreaView, TextInput, Pressable, StyleSheet } from 'react-native';
 
-import Header from './header';
+import Header from '../header';
 
-const CreateAccount = () => {
+const EmailVerification = () => {
   const [email, setEmail] = useState(null);
   const viewStyle = {
     marginTop: 0
@@ -59,4 +59,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CreateAccount;
+export default EmailVerification;

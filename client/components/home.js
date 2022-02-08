@@ -9,7 +9,7 @@ const Home = ({ navigation }) => {
       <View>
         <Pressable
           style={{...styles.button, ...styles.createAcct}}
-          onPress={() => navigation.navigate('CreateAccount')}
+          onPress={() => navigation.navigate('Email Verification')}
         >
           <Text
             style={styles.text}
