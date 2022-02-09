@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Text, Dimensions, SafeAreaView, TextInput, Pressable, StyleSheet } from 'react-native';
+import { Text, Dimensions, TextInput, Pressable, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Header from '../header';
 
-const EmailVerification = () => {
+const EmailVerification = ({ navigation }) => {
   const [email, setEmail] = useState(null);
   const viewStyle = {
-    marginTop: 0
+    marginTop: 50
   };
   const titleStyle = {
-    fontSize: 20,
+    fontSize: 30,
     marginBottom: 100
   };
   const inputStyle = {
@@ -22,7 +23,7 @@ const EmailVerification = () => {
     <>
       <SafeAreaView>
         <Header viewStyle={viewStyle} titleStyle={titleStyle}/>
-        <Text style={{alignSelf: 'center', fontSize: 30, marginBottom: 20}}>Please enter your email for verification purposes:</Text>
+        <Text style={{alignSelf: 'center', fontSize: 20, marginBottom: 25}}>Please enter your email for verification purposes:</Text>
         <TextInput
           style={inputStyle}
           placeholder='email@domain.com'
@@ -31,7 +32,10 @@ const EmailVerification = () => {
         />
         <Pressable
           style={styles.button}
-          onPress={() => console.log(email)}
+          onPress={() => {
+            console.log(email);
+            navigation.navigate('Username/Password');
+          }}
         >
           <Text
             style={styles.text}
