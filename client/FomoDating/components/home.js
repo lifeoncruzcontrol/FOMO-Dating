@@ -20,7 +20,7 @@ const Home = ({ navigation }) => {
       <View>
         <Button navigation={navigation} route='Email Verification' text='Create Account'/>
 
-        <Button navigation={navigation} route='' text='Sign-in'/>
+        <Button text='Sign-in'/>
         <Text>
           By creating an account or signing in, you agree to our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy.
         </Text>

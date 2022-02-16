@@ -2,15 +2,17 @@ import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
 
 const Button = ({ 
-  navigation, 
-  route, 
+  navigation = null, 
+  route = null, 
   text="Submit" 
 }) => {
   return(
     <Pressable
       style={styles.button}
       onPress={() => {
-        navigation.navigate(route);
+        if(navigation !== null){
+          navigation.navigate(route);
+        }
       }}
     >
       <Text
