@@ -33,8 +33,7 @@ const EmailVerification = ({ navigation }) => {
         <Pressable
           style={styles.button}
           onPress={() => {
-            console.log(email);
-            navigation.navigate('Username/Password');
+            navigation.navigate('Enter Verification Code');
           }}
         >
           <Text
