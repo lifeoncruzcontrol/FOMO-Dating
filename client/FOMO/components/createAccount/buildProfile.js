@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Text, TextInput, Pressable, StyleSheet } from 'react-native';
+import { Text, TextInput, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Header from '../header';
 import InputPrompt from '../customTools/inputPrompt';
-import Button from '../customTools/button';
+import FomoButton from '../customTools/fomoButton';
 
 const BuildProfile = ({ navigation }) => {
   const [name, setName] = useState(null);
@@ -25,16 +25,27 @@ const BuildProfile = ({ navigation }) => {
     <SafeAreaView>
       <Header />
       <InputPrompt promptText='Please fill out your profile information'/>
+      <View style={{
+        flexDirection: "row"
+      }}>
+        <View style={{
+          flex: 0.5
+        }}>
+          <Text style={inputLabelStyle}>Name</Text>
+          <TextInput
+            style={inputStyle}
+            placeholder='Your name'
+            keyboardType='default'
+            onChangeText={setName}
+          />
+        </View>
+        <View style={{flex: 0.5}}>
+          <Text style={inputLabelStyle}>Profile Photo</Text>
+          <FomoButton text='Upload'></FomoButton>
+        </View>
+      </View>
 
-      <Text style={inputLabelStyle}>Name</Text>
-      <TextInput
-        style={inputStyle}
-        placeholder='Your name'
-        keyboardType='default'
-        onChangeText={setName}
-      />
-
-      <Text style={inputLabelStyle}>Home (Where you hail from)</Text>
+      <Text style={inputLabelStyle}>Home</Text>
       <TextInput
         style={inputStyle}
         placeholder='Your home'
@@ -42,15 +53,31 @@ const BuildProfile = ({ navigation }) => {
         onChangeText={setHome}
       />
 
-      <Text style={inputLabelStyle}>About (This is what users will initially see. Make sure you stand out!)</Text>
+      <Text style={inputLabelStyle}>About</Text>
       <TextInput
-        style={inputStyle}
+        style={{
+          height: 80,
+          margin: 20,
+          borderWidth: 1,
+          padding: 10
+        }}
         placeholder='About you'
         keyboardType='default'
         onChangeText={setAbout}
+        multiline={true}
       />
 
-      <Button />
+      <View style={{
+        flexDirection: "row",
+        marginBottom: 20
+      }}>
+        <View style={{flex: 1}}>
+          <Text style={inputLabelStyle}>Photo Album</Text>
+          <FomoButton text='Upload'></FomoButton>
+        </View>
+      </View>
+
+      <FomoButton text='Continue'/>
     </SafeAreaView>
   )
 };
