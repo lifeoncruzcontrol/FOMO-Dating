@@ -18,7 +18,7 @@ const Home = ({ navigation }) => {
         }}
       />
       <View>
-        <Button navigation={navigation} route='Email Verification' text='Create Account'/>
+        <Button navigation={navigation} route='Get New Account Info' text='Create Account'/>
 
         <Button text='Sign-in'/>
         <Text>

@@ -10,7 +10,8 @@ const EnterVerificationCode = ({ navigation }) => {
   const [verificationCode, setVerificationCode] = useState(null);
   const inputStyle = {
     height: 40,
-    margin: 12,
+    marginTop: 25,
+    marginBottom: 50,
     borderWidth: 1,
     padding: 10
   };
@@ -24,7 +25,7 @@ const EnterVerificationCode = ({ navigation }) => {
         keyboardType='default'
         onChangeText={setVerificationCode}
       />
-    <Button navigation={navigation} route='Username/Password' />
+    <Button navigation={navigation} route='Build Profile' />
     </SafeAreaView>
   );
 };

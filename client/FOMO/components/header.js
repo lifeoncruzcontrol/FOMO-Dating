@@ -3,7 +3,7 @@ import { View, Text, Dimensions } from 'react-native';
 
 const Header = ({
   viewStyle = {
-    marginTop: 50
+    marginTop: 10
   },
   titleStyle={
     fontSize: 30,
