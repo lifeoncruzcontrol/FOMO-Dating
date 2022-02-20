@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Dimensions, Text, Pressable, StyleSheet } from 'react-native';
 
 import Header from './header';
-import Button from './customTools/button';
+import FomoButton from './customTools/fomoButton';
 
 const Home = ({ navigation }) => {
   return(
@@ -18,9 +18,9 @@ const Home = ({ navigation }) => {
         }}
       />
       <View>
-        <Button navigation={navigation} route='Get New Account Info' text='Create Account'/>
+        <FomoButton navigation={navigation} route='Get New Account Info' text='Create Account'/>
 
-        <Button text='Sign-in'/>
+        <FomoButton text='Sign-in'/>
         <Text>
           By creating an account or signing in, you agree to our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy.
         </Text>

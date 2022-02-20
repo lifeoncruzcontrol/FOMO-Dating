@@ -3,7 +3,7 @@ import { Text, Dimensions, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Header from '../header';
-import Button from '../customTools/button';
+import FomoButton from '../customTools/fomoButton';
 import InputPrompt from '../customTools/inputPrompt';
 
 const GetNewAccountInfo = ({ navigation }) => {
@@ -66,7 +66,7 @@ const GetNewAccountInfo = ({ navigation }) => {
         onChangeText={setConfirmPassword}
       />
       {notMatching && <Text>Your passwords do not match!</Text>}
-      <Button navigation={navigation} route='Enter Verification Code' />
+      <FomoButton navigation={navigation} route='Enter Verification Code' />
     </SafeAreaView>
   );
 };

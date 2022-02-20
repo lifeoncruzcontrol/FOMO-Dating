@@ -3,7 +3,7 @@ import { Text, Dimensions, TextInput, Pressable, StyleSheet } from 'react-native
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Header from '../header';
-import Button from '../customTools/button';
+import FomoButton from '../customTools/fomoButton';
 import InputPrompt from '../customTools/inputPrompt';
 
 const EnterVerificationCode = ({ navigation }) => {
@@ -24,7 +24,7 @@ const EnterVerificationCode = ({ navigation }) => {
         keyboardType='default'
         onChangeText={setVerificationCode}
       />
-    <Button navigation={navigation} route='Build Profile' />
+    <FomoButton navigation={navigation} route='Build Profile' />
     </SafeAreaView>
   );
 };
