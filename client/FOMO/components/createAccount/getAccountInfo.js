@@ -55,6 +55,7 @@ const GetNewAccountInfo = ({ navigation }) => {
         keyboardType='default'
         onChangeText={setPassword}
       />
+      <Text style={{color: "grey", marginBottom: 20}}>Your password should be at least 8 characters long and should contain at least 1 number and 1 symbol</Text>
       <Text>
         Confirm Password:
       </Text>
