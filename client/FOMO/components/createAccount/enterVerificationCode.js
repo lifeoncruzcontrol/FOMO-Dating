@@ -10,8 +10,7 @@ const EnterVerificationCode = ({ navigation }) => {
   const [verificationCode, setVerificationCode] = useState(null);
   const inputStyle = {
     height: 40,
-    marginTop: 25,
-    marginBottom: 50,
+    margin: 20,
     borderWidth: 1,
     padding: 10
   };
