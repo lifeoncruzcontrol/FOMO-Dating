@@ -17,7 +17,7 @@ const Header = ({
       <Text
         style={titleStyle}
       >
-        FOMO Dating
+        FOMO
       </Text> 
     </View>
   );
