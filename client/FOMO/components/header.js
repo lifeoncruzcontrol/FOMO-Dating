@@ -7,7 +7,7 @@ const Header = ({
   },
   titleStyle={
     fontSize: 30,
-    marginBottom: 100
+    marginBottom: 70
   }
 }) => {
   return(
