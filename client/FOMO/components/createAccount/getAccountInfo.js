@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, Dimensions, TextInput } from 'react-native';
+import { Text, Dimensions, TextInput, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Header from '../header';
@@ -26,47 +26,49 @@ const GetNewAccountInfo = ({ navigation }) => {
 
   return(
     <SafeAreaView>
-      <Header />
-      <InputPrompt marginBottom={20} promptText='Enter the email, username, and password to be associated with your account:'/>
-      <Text>
-        Email:
-      </Text>
-      <TextInput
-        style={inputStyle}
-        placeholder='Your email'
-        keyboardType='email-address'
-        onChangeText={setEmail}
-      />
-      <Text>
-        Username:
-      </Text>
-      <TextInput
-        style={inputStyle}
-        placeholder='Your username'
-        keyboardType='default'
-        onChangeText={setUsername}
-      />
-      <Text>
-        Password:
-      </Text>
-      <TextInput
-        style={inputStyle}
-        placeholder='Your password'
-        keyboardType='default'
-        onChangeText={setPassword}
-      />
-      <Text style={{color: "grey", marginBottom: 20}}>Your password should be at least 8 characters long and should contain at least 1 number and 1 symbol</Text>
-      <Text>
-        Confirm Password:
-      </Text>
-      <TextInput
-        style={inputStyle}
-        placeholder='Your password'
-        keyboardType='default'
-        onChangeText={setConfirmPassword}
-      />
-      {notMatching && <Text>Your passwords do not match!</Text>}
-      <FomoButton navigation={navigation} route='Enter Verification Code' />
+      <ScrollView>
+        <Header />
+        <InputPrompt marginBottom={20} promptText='Enter the email, username, and password to be associated with your account:'/>
+        <Text>
+          Email:
+        </Text>
+        <TextInput
+          style={inputStyle}
+          placeholder='Your email'
+          keyboardType='email-address'
+          onChangeText={setEmail}
+        />
+        <Text>
+          Username:
+        </Text>
+        <TextInput
+          style={inputStyle}
+          placeholder='Your username'
+          keyboardType='default'
+          onChangeText={setUsername}
+        />
+        <Text>
+          Password:
+        </Text>
+        <TextInput
+          style={inputStyle}
+          placeholder='Your password'
+          keyboardType='default'
+          onChangeText={setPassword}
+        />
+        <Text style={{color: "grey", marginBottom: 20}}>Your password should be at least 8 characters long and should contain at least 1 number and 1 symbol</Text>
+        <Text>
+          Confirm Password:
+        </Text>
+        <TextInput
+          style={inputStyle}
+          placeholder='Your password'
+          keyboardType='default'
+          onChangeText={setConfirmPassword}
+        />
+        {notMatching && <Text>Your passwords do not match!</Text>}
+        <FomoButton navigation={navigation} route='Enter Verification Code' />
+      </ScrollView>
     </SafeAreaView>
   );
 };
